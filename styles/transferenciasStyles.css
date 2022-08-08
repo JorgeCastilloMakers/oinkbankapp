@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --amarillo: #FFDE59;
+    --rosaClaro: #F9B7B7;
+    --rosaOscuro: #FF9999;
+    
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+.main_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #f9b7b7ab;
+    background-image: url(/images/OINK!BANK-BG-DESKTOP.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+.section_container{
+    background-color: #fffbfbd7;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 11px 22px -8px rgba(0,0,0,0.75);
+    backdrop-filter: blur(2px);
+    gap: 15px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+
+}
+.go-back-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+}
+.go-back-container > a > i{
+    color: #000000;
+    cursor: pointer;
+    font-size: 25px;
+    position: relative;
+}
+.go-back-container > a > i:hover{
+    color: var(--rosaOscuro);
+}
+.go-back-container > a > i:hover::after{
+    content: "Volver";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    color: #000000;
+    font-size: 15px;
+    top: 25px;
+    left: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.logo_container > h2{
+    font-size: clamp(30px, 4vw, 55px);
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
+.logo_container > h3{
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 700;
+    text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+    text-transform: uppercase;
+}
+.oink{
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 700;
+    text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+    color: var(--amarillo);
+    text-transform: uppercase;
+}
+.form_transferencia_container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.form_transferencia_container > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    position: relative;
+    max-width: 800px;
+    padding: 15px;
+}
+
+.form_transferencia_container > form > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+
+}
+.motivo-trans-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+}
+.form_transferencia_container > form > div > label{
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+.form_transferencia_container > form > div > span {
+    text-align: center;
+}
+
+.form_transferencia_container > form > div > div > input{
+    border: none;
+    border-bottom: 1px solid var(--rosaClaro);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+.form_transferencia_container > form > div > div > input:focus{
+    outline: none;
+    border-bottom: 2px solid var(--rosaOscuro);
+
+}
+
+
+.form_transferencia_container > form> div > a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.monto-transferir-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.monto-transferir-container img{
+    width:8%;
+    position: absolute;
+    right: 96%;
+}
+#monto-transferir{
+    order: 2;
+    flex: 1 1 100%;
+    height: 25px;
+    color: #000000;
+}
+
+.select-input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #FF9999;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 18px;
+    
+}
+.select-input:focus{
+    outline: none;
+}
+
+.add-new-cbu-a{
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all 0.8s ease;
+    text-decoration: none;
+    color: #000000;
+}
+.add-new-cbu-a:hover{
+    transform: translateY(-3px);
+    color: #FF9999;
+}
+.lightbox{
+    display: none;
+    background-color: rgba(36, 34, 34, 0.87);
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    z-index: 2;
+    
+}
+
+.lightbox > div > a{
+    text-decoration: none;
+    color: #fff;
+}
+.lightbox > div > a:hover{
+    color: #FFDE59;
+}
+.lightbox input{
+    width: 60%;
+    height: 20%;
+    background-color: transparent;
+    outline: none;
+    border-style: none;
+    border-bottom: 1px solid var(--rosaOscuro);
+    margin-top: 20%;
+    font-size:clamp(15px, 3vw, 23px);
+    text-align: center;
+    color: #fff;
+}   
+.lightbox h3{
+    color: white;
+    font-size: clamp(15px, 8vw, 17px);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* contenedor imagen de cruz */
+.cross-img-container{
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    z-index: 99;
+    filter: drop-shadow(0px 0px 0.5px white);
+}
+
+
+.lightbox-showContact{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    background: linear-gradient(to bottom,#e0dcdc, rgb(255, 255, 255));
+    gap:10px;    
+    padding: 20px;
+}
+.lightbox-showContact h2{
+    letter-spacing: 1px;
+}
+.lightbox-showContact button{
+    font-size: clamp(10px, 3.5vw, 20px);
+    border-style: none;
+    background-color: #FF9999;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 5px 20px;
+
+
+}
+
+/* repeat error */
+
+
+.add-container{
+    margin-top: 10%;
+}
+#add-a{
+    background-color: var(--rosaOscuro);
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.empty-container{
+    background-color: #ffffff;
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    top: 10%;
+    border-radius: 12px;
+    filter: drop-shadow(2px 2px 0px black);
+    display: none;
+}
+
+.empty-items
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.empty-items h3{
+    color: rgba(255, 0, 0, 0.767);
+    font-size:clamp(15px, 2vw, 18px);
+    padding-top: 5px;
+    
+}
+
+.redcross-img-cont{
+    position: absolute;
+    width: 100%;
+   /*  max-width: 1200px; */
+   top: 4.5%;
+   left:92.5%;
+}
+.cbu-disabledd{
+    color: red;
+    z-index: 100;
+    
+}
+
+#lista-motivos{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #FF9999;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 18px;
+}
+#lista-motivos:focus{
+    outline: none;
+}
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: #020202;
+}
+   
+button.learn-more {
+    width: 200px;
+    height: auto;
+}
+   
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--rosaOscuro);
+    border-radius: 1.625rem;
+    box-shadow: 0px 0px 10px 2px rgba(255,153,153,0.69);
+}
+   
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+   
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+   
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 0px;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
+
+
+.cbu-added-message{
+    display: flex;
+    justify-content: center;
+    top:73.5%;
+    /*   */
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 200px;
+    position: absolute;
+    padding: 20px;
+    transition-duration: 1s;
+    transition: all 2s;
+}
+
+.cbu-added-message span{
+    color: green;
+    position: absolute;
+}
+
+.succesTransfered-container, .empty-Incorrect-error, .enoughtMoney{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+    max-height: 100px;
+    position: absolute;
+    top: -25%;
+    background-color: rgba(0, 0, 0, 0.726);
+    
+}
+.succesTransfered-container h3{
+    color: green;
+    filter: drop-shadow(green 1.5px 1.2px 1.5px);
+    padding: 10px;
+}
+
+.empty-Incorrect-error h3{
+    color: rgb(128, 0, 0);
+    filter: drop-shadow(rgb(128, 0, 0) 1.5px 1.2px 1.5px);
+    padding: 10px;
+    text-align: center;
+}
+.enoughtMoney h3{
+    color: rgb(128, 0, 0);
+    filter: drop-shadow(rgb(128, 0, 0) 1.5px 1.2px 1.5px);
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 780px){
+    .section_container{
+        width: 95%;
+    }
+}

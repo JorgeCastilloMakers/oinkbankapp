@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Montserrat', sans-serif;
+}
+main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+section{
+  max-width: 1200px;
+  max-height: 100%;
+  padding: 40px;
+}
+.title-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.title-container > h2{
+  font-weight: 500;
+}
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pig-loading-class{
+  width: 40%;
+}
+

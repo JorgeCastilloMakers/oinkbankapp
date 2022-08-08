@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oink Bank</title>
+    <link rel="stylesheet" href="/styles/depositosStyles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/2bbf1df7bb.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+<body>
+    
+    <div class="main_container">
+        <section class="section_container">
+            <div class="go-back-container">
+                <a href="/actionsUser/homeCliente.html">
+                    <i class="fa-solid fa-angle-left"></i>
+                </a>
+            </div>
+            <div class="logo_container">
+                <h2>OINK! BANK APP</h2>
+                <h3><span class="oink">Oink</span>line Banking</h3>
+            </div>
+            <div class="title-container">
+                <h2>Depósitos</h2>
+            </div>
+            <div class="actionButtons_container" >
+                <button class="learn-more" type="submit" id="btn-cta-propia">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Cuentas Propias</span>
+                  </button>
+                <button class="learn-more" type="submit" id="btn-cta-terceros">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Cta de Terceros</span>
+                  </button>
+            </div>
+            <div class="cta_propia_container" id="cta-propia">
+                <i class="fa-solid fa-xmark" id="close-window"></i>
+                <div>
+                    <label>CBU:</label>
+                    <span id="cbu-user"></span>
+                </div>
+                <div>
+                    <label for="monto_increment">Monto:</label>
+                    <input type="number" name="monto_increment" id="monto-deposito-propio" placeholder="$0.00">
+                </div>
+                <div>
+                    <label for="motivo">Motivo:</label>
+                    <input type="text" name="motivo" id="motivo-deposito-propio">
+                </div>
+                <button class="learn-more btn-depositar" type="submit" onclick="depositarPropia()">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Depositar</span>
+                  </button>
+            </div>
+            <div class="cta_terceros_container" id="cta-terceros">
+                <i class="fa-solid fa-xmark" id="close-window-terceros"></i>
+                <div>
+                    <label name="cbu-tercero">CBU*</label>
+                    <input type="text" name="cbu-tercero" id="cbu-tercero" required>
+                </div>
+                <div>
+                    <label for="monto_decrement">Monto</label>
+                    <input type="number" name="monto_decrement" id="monto-deposito-tercero" placeholder="$0.00">
+                </div>
+                <div>
+                    <label for="motivo-deposito">Motivo del Depósito</label>
+                    <input list="lista-motivos" name="motivo-deposito" id="motivo-deposito">
+                        <datalist id="lista-motivos">
+                            <option value="Alquiler"></option>
+                            <option value="Expensas"></option>
+                            <option value="Préstamo"></option>
+                            <option value="Seguros"></option>
+                            <option value="Varios"></option>
+                        </datalist>
+                    </input>
+                </div>
+                <button class="learn-more btn-depositar" type="submit" onclick="depositarTerceros()">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Depositar</span>
+                  </button>
+            </div>
+        </section>
+    </div>
+    <script src="/scripts/depositos.js"></script>
+</body>
+</html>

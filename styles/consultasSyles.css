@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --amarillo: #FFDE59;
+    --rosaClaro: #F9B7B7;
+    --rosaOscuro: #FF9999;
+    
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+.main_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9b7b7ab;
+    background-image: url(/images/OINK!BANK-BG-DESKTOP.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section_container{
+    background-color: #fffbfbd7;
+    border-radius: 10px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 11px 22px -8px rgba(0,0,0,0.75);
+    backdrop-filter: blur(2px);
+    gap: 20px;
+}
+.go-back-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+}
+.go-back-container > a > i{
+    color: #000000;
+    cursor: pointer;
+    font-size: 25px;
+    position: relative;
+}
+.go-back-container > a > i:hover{
+    color: var(--rosaOscuro);
+}
+.go-back-container > a > i:hover::after{
+    content: "Volver";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    color: #000000;
+    font-size: 15px;
+    top: 25px;
+    left: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.logo_container > h2{
+    font-size: clamp(30px, 4vw, 55px);
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
+.logo_container > h3{
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 700;
+    text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+    text-transform: uppercase;
+}
+.oink{
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 700;
+    text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+    color: var(--amarillo);
+    text-transform: uppercase;
+}
+
+.card{
+    width: 60%;
+    height: 35%;
+    background: rgb(234,190,63);
+    background: linear-gradient(145deg, rgba(234,190,63,1) 0%, rgba(229,166,94,1) 45%, rgba(234,190,63,1) 100%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2%;
+    box-shadow: 0px 11px 22px -8px rgba(0,0,0,0.75);
+}
+.card > .loguito{
+    width: 100%;
+}
+.card > .loguito > h2{
+    text-align: right;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fafafa;
+    padding-right: 2%;
+    padding-top: 1%;
+
+}
+.card > .cbu_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    position: relative;
+}
+
+.card > .cbu_container > span{
+    font-family: 'Chakra Petch', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(16px, 1.5vw, 25px);
+}
+.card > .cbu_container > p{
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card > .cbu_container > button{
+    align-self: flex-end;
+    right: 10%;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 2px 5px;
+    background-color: #a37803;
+    color: #fafafa;
+    text-transform: uppercase;
+
+}
+.card > .datos_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+
+}
+.card > .datos_container > p{
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.card > .datos_container > div {
+    display: flex;
+    gap: 5px;
+}
+.card > .datos_container > div > span{
+    font-family: 'Chakra Petch', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(16px, 1.5vw, 25px);
+}
+@media (max-width: 830px){
+    .card{
+        width: 90%;
+        height: 30%
+    }
+}
+.panel_container{
+    background-color: rgba(117, 117, 117, 0.19);
+    width: 60%;
+    height: 30%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.panel_container > h2{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.panel_container > div {
+    display: flex;
+    gap: 5px;
+}
+.panel_container > div > h3 , span{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 30px;
+}
+.panel_container > div > i{
+    color: rgb(2, 128, 23);
+    font-weight: 700;
+    font-size: 20px;
+}
+@media (max-width:780px){
+    .panel_container > h2{
+        text-align: center;
+    }
+    .main_container{
+        background-image: url(/images/OINK!BANK-BG-MOBILE.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .section_container{
+        width: 90%;
+    }
+
+}

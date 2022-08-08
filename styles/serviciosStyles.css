@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --amarillo: #ffde59;
+  --rosaClaro: #f9b7b7;
+  --rosaOscuro: #ff9999;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9b7b7ab;
+  background-image: url(/images/OINK!BANK-BG-DESKTOP.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section_container {
+  background-color: #fffbfbd7;
+  border-radius: 10px;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 11px 22px -8px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  gap: 20px;
+}
+.go-back-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+}
+.go-back-container > a > i{
+  color: #000000;
+  cursor: pointer;
+  font-size: 25px;
+  position: relative;
+}
+.go-back-container > a > i:hover{
+  color: var(--rosaOscuro);
+}
+.go-back-container > a > i:hover::after{
+  content: "Volver";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  color: #000000;
+  font-size: 15px;
+  top: 25px;
+  left: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+}
+.logo_container > h2 {
+  font-size: clamp(30px, 4vw, 55px);
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+}
+
+.logo_container > h3 {
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 700;
+  text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+  text-transform: uppercase;
+}
+.oink {
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 700;
+  text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+  color: var(--amarillo);
+  text-transform: uppercase;
+}
+
+.actionButtons_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  flex-direction: column;
+}
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: #000000;
+}
+
+button.learn-more {
+  width: 265px;
+  height: 40px;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--rosaOscuro);
+  border-radius: 1.625rem;
+  box-shadow: 0px 0px 10px 2px rgba(255, 153, 153, 0.69);
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  padding-top: 5px;
+  margin: 0 0 0 1.85rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.button-text > a {
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s ease;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+.button-text > a:hover {
+  color: #fff;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+@media (max-width: 780px) {
+  .panel_container > h2 {
+    text-align: center;
+  }
+  .main_container {
+    background-image: url(/images/OINK!BANK-BG-MOBILE.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .section_container {
+    width: 90%;
+  }
+
+}

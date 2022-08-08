@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oink Bank</title>
+    <link rel="stylesheet" href="/styles/consultasSyles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/2bbf1df7bb.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+    </style>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="main_container">
+        <section class="section_container">
+            <div class="go-back-container">
+                <a href="/actionsUser/homeCliente.html">
+                    <i class="fa-solid fa-angle-left"></i>
+                </a>
+            </div>
+            <div class="logo_container">
+                <h2>OINK! BANK APP</h2>
+                <h3><span class="oink">Oink</span>line Banking</h3>
+            </div>
+            <div class="title-container">
+                <h2>Consultas</h2>
+            </div>
+            <div class="card">
+                <div class="loguito">
+                    <h2>OINK! BANK</h2>
+                </div>
+                <div class="cbu_container">
+                    <p>CBU:</p>
+                    <span id="user-cbu"></span>
+                    <button type="submit" onclick="copiarCBU()">Copiar</button>
+                </div>
+                <div class="datos_container">
+                    <p>Datos Titular</p>
+                    <div>
+                        <span id="user-name"></span><span> </span><span id="user-apell"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel_container">
+                <h2>Tu saldo disponible es:</h2>
+                <div>
+                    <h3>$ </h3><span id="user-balance"></span><i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/scripts/miCBU.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --amarillo: #ffde59;
+  --rosaClaro: #f9b7b7;
+  --rosaOscuro: #ff9999;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+.main_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9b7b7ab;
+  background-image: url(/images/OINK!BANK-BG-DESKTOP.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section_container {
+  background-color: #fffbfbd7;
+  border-radius: 10px;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 11px 22px -8px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  gap: 50px;
+  position: relative;
+}
+.go-back-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+}
+.go-back-container > a > i{
+  color: #000000;
+  cursor: pointer;
+  font-size: 25px;
+  position: relative;
+}
+.go-back-container > a > i:hover{
+  color: var(--rosaOscuro);
+}
+.go-back-container > a > i:hover::after{
+  content: "Volver";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  color: #000000;
+  font-size: 15px;
+  top: 25px;
+  left: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.logo_container > h2 {
+  font-size: clamp(30px, 4vw, 55px);
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+}
+
+.logo_container > h3 {
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 700;
+  text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+  text-transform: uppercase;
+}
+.oink {
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 700;
+  text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+  color: var(--amarillo);
+  text-transform: uppercase;
+}
+.cta_terceros_container {
+  position: absolute;
+  background-color: #0000009d;
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+.cta_propia_container {
+  position: absolute;
+  background-color: #0000009d;
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+.cta_propia_container > i {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #fafafa;
+  cursor: pointer;
+}
+.cta_terceros_container > i {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #fafafa;
+  cursor: pointer;
+}
+.cta_propia_container > div {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+.cta_terceros_container > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.cta_propia_container,
+.cta_terceros_container > div > label {
+  color: #fafafa;
+}
+.cta_propia_container,
+.cta_terceros_container > div > span {
+  color: #fafafa;
+}
+.cta_propia_container > div > input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--rosaClaro);
+  color: #fafafa;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+}
+.cta_propia_container > div > input::placeholder{
+  text-align: center;
+  color: #fafafa;
+  font-weight: 200;
+}
+.cta_terceros_container > div > input::placeholder{
+  text-align: center;
+  color: #fafafa;
+}
+.cta_terceros_container > div > input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--rosaClaro);
+  color: #fafafa;
+  font-size: 18px;
+  text-align: center;
+}
+.cta_propia_container > div > input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--rosaOscuro);
+}
+.cta_terceros_container > div > input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--rosaOscuro);
+}
+.cta_propia_container,
+.cta_terceros_container > div:nth-child(2) {
+  display: flex;
+  gap: 15px;
+  text-transform: uppercase;
+  justify-content: center;
+}
+.cta_terceros_container > div:nth-child(4) {
+  flex-direction: column;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: #000000;
+}
+#btn-depositar {
+  color: #fafafa;
+}
+
+button.learn-more {
+  width: 240px;
+  height: 40px;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--rosaOscuro);
+  border-radius: 1.625rem;
+  box-shadow: 0px 0px 10px 2px rgba(255, 153, 153, 0.69);
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  padding-top: 5px;
+  margin: 0 0 0 1.85rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+.btn-depositar {
+  color: #fafafa;
+}
+@media (max-width: 780px) {
+  .main_container {
+    background-image: url(/images/OINK!BANK-BG-MOBILE.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .section_container {
+    width: 90%;
+  }
+  .actionButtons_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cta_propia_container {
+    width: 95%;
+    height: 60%;
+  }
+  .cta_propia_container > div{
+    width: 98%;
+    flex-direction: column;
+  }
+  .cta_propia_container > div > input{
+    width: 50%;
+  }
+  .cta_terceros_container > div{
+    width: 98%;
+    flex-direction: column;
+  }
+  .cta_terceros_container {
+    width: 100%;
+    height: 60%;
+  }
+  .cta_terceros_container > div > input{
+    width: 50%;
+  }
+}

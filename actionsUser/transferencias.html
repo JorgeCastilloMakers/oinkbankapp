@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oink Bank</title>
+    <link rel="stylesheet" href="/styles/transferenciasStyles.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/2bbf1df7bb.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <div class="main_container">
+        <section class="section_container">
+            <div class="go-back-container">
+                <a href="/actionsUser/homeCliente.html">
+                    <i class="fa-solid fa-angle-left"></i>
+                </a>
+            </div>
+            <div class="logo_container">
+                <h2>OINK! BANK APP</h2>
+                <h3><span class="oink">Oink</span>line Banking</h3>
+            </div>
+            <div class="title-container">
+                <h2>Transferencias</h2>
+            </div>
+            <div class="form_transferencia_container">
+                <form action="" class="transferencia" id="transferencia-container">
+                    <div>
+                        <label for="cuenta-origen">Cuenta de Origen</label>
+                        <div class="cbu-disabled" id="cbu-disabled">
+
+                        </div>
+                    </div>
+                    <div>
+                        <label for="monto-transferir">Monto a Transferir</label>
+                        <div class="monto-transferir-container">
+                            <input type="number" name="monto-transferir" id="monto-transferir">
+                            <span>$</span>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <label for="cbu-destino">CBU Destino</label>
+                        <select name="select-input" id="select-input" class="select-input"></select>
+                        <!-- lightBOX para agregar un nuevo CBU -->
+
+                            <div class="lightbox" id="lightbox-cbuAdd-msj">
+                                <h3>Añade un nuevo cbu</h3>
+                                <input type="text" name="cbu-destino" id="cbu-destino">
+                                <div class="cross-img-container" id="crossButtonC">
+                                    <a id="img-click" href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </div>
+                                <div class="add-container">
+                                    <a href="#" id="add-a">Agregar</a>
+                                </div>
+
+                                <div id="showcontactlightbox" class="lightbox-showContact">
+                                    <h2>Contacto</h2>
+                                    <span id="nombreapellido"></span>
+                                    <span id="cbuid"></span>
+                                    <button type="button">OK</button>
+                                   
+                                </div>
+                                
+                                <!-- error de campo vacío -->
+                                <div class="error-classs" id="empty-msg">
+                                        <div class="empty-items">
+                                                <h3>CAMPO VACÍO</h3>
+
+                                        </div>
+                                </div>
+
+                                
+                                <!-- mensaje de cbu agregado -->
+                                <div class="cbu-added-message" id="cbu-added-message">
+                                    <span>¡CBU agregado!</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    <div>
+                        <a id="addCBU-popUp" href="#" class="add-new-cbu-a">Agregar un nuevo CBU</a>
+                    </div>
+                    <div class="motivo-trans-label">
+                        <label for="motivo-transferencia">Motivo de la Transferencia</label>
+                            <select id="lista-motivos">
+                                <option value="Alquiler">Alquiler</option>
+                                <option value="Expensas">Expensas</option>
+                                <option value="Préstamo">Préstamo</option>
+                                <option value="Seguros">Seguros</option>
+                                <option value="Varios">Varios</option>
+                            </select>
+                        </input>
+                    </div>
+                    <div>
+                        <button type="submit" class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Transferir</span>
+                          </button>
+                    </div>
+                    
+                    <div class="pig-error" id="emptyIncorrect">
+                        <!-- <h3>Error, campos vacíos o incorrectos.</h3> -->
+                        
+                        <p>Rellena los campos.</p>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+    </div>
+<script src="/scripts/transferencias.js"></script>
+
+</body>
+</html>

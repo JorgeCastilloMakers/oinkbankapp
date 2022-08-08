@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --amarillo: #FFDE59;
+    --rosaClaro: #F9B7B7;
+    --rosaOscuro: #FF9999;
+    
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+.container_home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9b7b7ab;
+    background-image: url(/images/OINK!BANK-BG-DESKTOP.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.home__container{
+    background-color: #fffbfbd7;
+    border-radius: 10px;
+    width: 60%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 11px 22px -8px rgba(0,0,0,0.75);
+    backdrop-filter: blur(2px);
+    gap: 20px;
+}
+.log_out_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 90%;
+}
+
+.log_out_container > a > i{
+    color: #000000;
+    cursor: pointer;
+    font-size: 25px;
+    position: relative;
+}
+.log_out_container > a > i:hover{
+    color: var(--rosaOscuro);
+}
+.log_out_container > a > i:hover::after{
+    content: "Cerrar sesión";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    color: #000000;
+    font-size: 15px;
+    top: 25px;
+    left: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.logo_container > h2{
+    font-size: clamp(30px, 4vw, 55px);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.logo_container > h3{
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 700;
+    text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+    text-transform: uppercase;
+}
+.oink{
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 700;
+    text-shadow: 0px 1px 2px rgba(5, 5, 5, 0.281);
+    color: var(--amarillo);
+    text-transform: uppercase;
+}
+
+.message_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.message_container > h2{
+    font-size: clamp(20px, 3.5vw, 45px);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.message_container > span{
+    font-size: clamp(20px, 3.5vw, 45px);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.actionButtons_container{
+    width: 40%;
+    height: 40%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+}
+.action_panel{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.panel_container{
+    background-color: rgb(255 255 255 / 19%);
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.panel_container > h2{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.panel_container > div {
+    display: flex;
+    gap: 5px;
+}
+.panel_container > div > h3 , span{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 20px;
+}
+.panel_container > div > i{
+    color: rgb(2, 128, 23);
+    font-weight: 700;
+    font-size: 20px;
+}
+.actionButtons_container > button > span > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: clamp(12px, 1.2vw, 20px);
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.8s ease;
+} 
+.actionButtons_container > button > span > a:hover{
+
+    color: rgb(255, 255, 255);
+
+} 
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: #020202;
+
+   }
+   
+   button.learn-more {
+    width: 240px;
+    height: 40px;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--rosaOscuro);
+    border-radius: 1.625rem;
+    box-shadow: 0px 0px 10px 2px rgba(255,153,153,0.69);
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 0;
+    bottom: 0;
+    padding-top: 5px;
+    margin: 0 0 0 1.85rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+@media (max-width:780px){
+    .actionButtons_container{
+        width: 50%;
+        height: 60%;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .panel_container > h2{
+        text-align: center;
+    }
+    button.learn-more {
+        width: 180px;
+        height: 40px;
+       }
+    
+}
+@media (max-width:780px){
+    .container_home{
+        width: 100%;
+        height: 100vh;
+        background-image: url(/images/OINK!BANK-BG-MOBILE.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+    }
+    .home__container{
+        width: 90%;
+        height: 100%;
+    }
+    .logo_container > h2{
+        text-align: center;
+    }
+    .action_panel{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .actionButtons_container{
+        order: 2;
+    }
+    .panel_container{
+        order: 1;
+        width: 80%;
+    }
+}
